@@ -1,0 +1,1549 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/29/2026 7:01:06 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ACER-ASPIRE-15"
+  DTS:CreatorName="ACER-ASPIRE-15\victo"
+  DTS:DTSID="{3BEEA423-ACA8-4726-A919-FCD4C3870E83}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="FromCSVToJSON"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{945D193C-0C0D-437A-9CBE-59776F0EE7C7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ame]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Flat File CSV"
+      DTS:DTSID="{88AD2A1A-60C2-44EA-AC5A-E7EC9A902C2D}"
+      DTS:ObjectName="ame">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\victo\source\repos\KrukTechDatabase\KrukTechDatabase\ExportedRecordsCSV.txt.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{2589751E-F4F4-42AB-B113-DE1A6371DEC0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{3F3311C8-BCAB-47D5-AEAB-CBF0091CA0BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="location"
+              DTS:DTSID="{C0D29239-5D7E-4ACA-8DFB-0DD5ABD560E4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="all columns"
+      DTS:DTSID="{957D2B53-D58A-4BCD-AACE-9C0ED6091E73}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\victo\source\repos\KrukTechDatabase\KrukTechDatabase\ExportedRecordsCSV.txt.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{C4E66A5A-4A75-4FAD-BA8D-1CF11604D0A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{10A84AAD-48E6-4FB9-82D4-EBEA8626C07C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="location"
+              DTS:DTSID="{E029C676-6967-491F-BD3B-297E06C6E1C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="error"
+              DTS:DTSID="{90839ADE-6713-425A-A44E-9B460D9FA10B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="errorcolumn"
+              DTS:DTSID="{3975C07D-6FB9-4CB2-85FC-0D78303AA7D8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HTTP Connection Manager]"
+      DTS:CreationName="HTTP (KingswaySoft)"
+      DTS:DTSID="{11B8D6AE-1500-437E-BFC8-0B37C1ADC69A}"
+      DTS:ObjectName="HTTP Connection Manager">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="BaseUrl=192.168.1.214;AuthenticationMode=Credentials;JwtClaims='{&#xA;  &quot;header&quot;: {},&#xA;  &quot;payload&quot;: {}&#xA;}';JwtKeyFile=;CustomTokenCurlFile=;CustomTokenFindStrategy=JPath;CustomTokenFindExpression=;CustomTokenExpiry=0;AwsSignatureVersion=Version4;AwsSignatureMethod=HmacSHA1;AwsAccessKey=;AwsRegion=;AwsServiceName=;AzureOAuthType=ClientCredentials;AzureAuthorizationUrl=https://login.microsoftonline.com;AzureTenantId=;AzureClientId=;AzureCertificateLocation=Store;AzureCertificateThumbprint=;AzurePathToCertificate=;GooglePathToJsonKeyFile=;GoogleScope=;AzureResource=;AzureScope=;PathToTokenFile=;AccessTokenRequestLocation=HttpHeader;ClientCredentialsClientId=;ClientCredentialsScope=;ClientCredentialsRequestTokensUrl=;ClientCredentialsBasicAuthentication=False;Domain=;UserName=;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ThrottleRate=0;ThrottleRateUnit=PerSecond;ServiceTimeout=120;RetryOnIntermittentErrors=True;AllowAutoRedirect=True;DropAuthorizationHeaderOnRedirects=False;ChunkSize=1000;CertificateLocation=Store;CertificateThumbprint=;IgnoreCertificateErrors=False;CustomHeaders='{&#xA;  &quot;User-Agent&quot;: {&#xA;    &quot;value&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) SSIS Productivity Pack by KingswaySoft (like Gecko)&quot;&#xA;  },&#xA;  &quot;Accept-Encoding&quot;: {&#xA;    &quot;value&quot;: &quot;gzip, deflate&quot;&#xA;  }&#xA;}';ErrorCodes='[{&quot;code&quot;:&quot;408&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;500&quot;,&quot;retryable&quot;:false},{&quot;code&quot;:&quot;502&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;503&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;504&quot;,&quot;retryable&quot;:true}]'"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\FromCSVToJSON"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{251B9736-7982-4713-AD86-52BB219858B3}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FromCSVToJSON"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="[JSON Destination Redirect].[BatchSize]">8192</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="[JSON Destination Redirect].[BasePath]">LEFT("RelativePath", 100)</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="[JSON Destination Redirect].[HttpMethod]">"POST"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\FromCSVToJSON\CSV File"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="CSV File"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FromCSVToJSON\CSV File.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[id]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].ExternalColumns[location]"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[location]"
+                      name="location"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[error]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].ExternalColumns[error]"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[error]"
+                      name="error"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[errorcolumn]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].ExternalColumns[errorcolumn]"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[errorcolumn]"
+                      name="errorcolumn"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      dataType="i8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].ExternalColumns[location]"
+                      dataType="wstr"
+                      length="255"
+                      name="location" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].ExternalColumns[error]"
+                      dataType="i8"
+                      name="error" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].ExternalColumns[errorcolumn]"
+                      dataType="wstr"
+                      length="255"
+                      name="errorcolumn" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      dataType="nText"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FromCSVToJSON\JSON Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2011-2025 KingswaySoft Inc."
+              description="Create a JSON document from column data and send it in an HTTP request or save it to a file."
+              name="JSON Destination"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="Design">[{"NodeType":2,"SourceType":"Input","InputOrColumnName":"root","Children":[{"NodeName":"id","NodeType":3,"SourceType":"Column","InputOrColumnName":"id"},{"NodeName":"name","NodeType":3,"SourceType":"Column","InputOrColumnName":"name"},{"NodeName":"location","NodeType":3,"SourceType":"Column","InputOrColumnName":"location"},{"NodeName":"error","NodeType":3,"SourceType":"Column","InputOrColumnName":"error"},{"NodeName":"errorcolumn","NodeType":3,"SourceType":"Column","InputOrColumnName":"errorcolumn"}]}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies if the linkId &amp; parentLinkId values used for merging child &amp; parent inputs are scrambled (true) or grouped (false)."
+                  expressionType="Notify"
+                  name="LinkIdsAreScrambled">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the max size of JSON document to output."
+                  expressionType="Notify"
+                  name="MergeMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.DocumentMergeMode">2</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When true the output JSON has line breaks and indents for human readability. When false the output JSON is a single line of text."
+                  expressionType="Notify"
+                  name="PrintPretty">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the batch size for 'Every Batch' Merge Mode."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how to write null values in the merged document."
+                  expressionType="Notify"
+                  name="NullMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.JsonMergeNullMode">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how to write empty arrays in the merged document."
+                  expressionType="Notify"
+                  name="EmptyArrayMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.JsonEmptyArrayMode">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how to write empty objects in the merged document."
+                  expressionType="Notify"
+                  name="EmptyObjectMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.JsonEmptyObjectMode">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the text encoding to use in the merged document."
+                  expressionType="Notify"
+                  name="Encoding">65001</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text qualifier to use when splitting values to be repeated in the final document."
+                  expressionType="Notify"
+                  name="IsRepeatedTextQualifier">Double-Quote ( " )</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text qualifier to use when splitting values to be repeated in the final document."
+                  expressionType="Notify"
+                  name="IsRepeatedTextDelimiter">Comma ( , )</property>
+                <property
+                  dataType="System.String"
+                  description="The relative path of the HTTP request that will be combined with the base path from the connection manager."
+                  expressionType="Notify"
+                  name="RelativePath">{"IsExpression":true,"Value":"\"[id][name][location][error][errorcolumn]\""}</property>
+                <property
+                  dataType="System.String"
+                  description="The body of the HTTP request."
+                  expressionType="Notify"
+                  name="RequestBody">{"IsExpression":false,"Value":"GET id,name,location,error,errorcolumn"}</property>
+                <property
+                  dataType="System.String"
+                  description="The headers that will be used in the request."
+                  expressionType="Notify"
+                  name="RequestHeaders">[]</property>
+                <property
+                  dataType="System.String"
+                  description="The query string parameters that will be used in the request."
+                  expressionType="Notify"
+                  name="RequestQueryStringParameters">[]</property>
+                <property
+                  dataType="System.String"
+                  description="The base path for output column values."
+                  expressionType="Notify"
+                  name="BasePath">{"IsExpression":false,"Value":"[id][name][location][error][errorcolumn]"}</property>
+                <property
+                  dataType="System.String"
+                  description="The item key for output column values."
+                  expressionType="Notify"
+                  name="ItemKey">{"IsExpression":false,"Value":""}</property>
+                <property
+                  dataType="System.String"
+                  description="The HTTP Method to use when sending requests."
+                  expressionType="Notify"
+                  name="HttpMethod">GET</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the path to the Item to get the json document from."
+                  expressionType="Notify"
+                  name="LocalFilePath">{"IsExpression":false,"Value":""}</property>
+                <property
+                  dataType="System.String"
+                  description="The encoding that will be used to read the json document."
+                  expressionType="Notify"
+                  name="LocalFileEncoding">Unicode (UTF-8)</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.ProductivityPack.JsonDestinationComponent</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FromCSVToJSON\JSON Destination.Connections[HTTP (KingswaySoft)]"
+                  connectionManagerID="Package.ConnectionManagers[HTTP Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[HTTP Connection Manager]"
+                  description="Connection manager for HTTP connections."
+                  name="HTTP (KingswaySoft)" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FromCSVToJSON\JSON Destination.Inputs[root]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="root">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="ParentId"
+                      name="ParentId">#{Package\FromCSVToJSON\-1:invalid}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="ParentColumnId"
+                      name="ParentColumnId">#{Package\FromCSVToJSON\-1:invalid}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="IdField"
+                      name="IdField">#{Package\FromCSVToJSON\-1:invalid}</property>
+                  </properties>
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Inputs[root].Columns[id]"
+                      cachedDataType="i8"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\FromCSVToJSON\JSON Destination.Inputs[root].ExternalColumns[id]"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous error output column of this input column."
+                          name="AsyncErrorOutputColumnId">#{Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[id]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous default output column of this input column."
+                          name="AsyncDefaultOutputColumnId">#{Package\FromCSVToJSON\-1:invalid}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Inputs[root].Columns[name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="name"
+                      externalMetadataColumnId="Package\FromCSVToJSON\JSON Destination.Inputs[root].ExternalColumns[name]"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous error output column of this input column."
+                          name="AsyncErrorOutputColumnId">#{Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[name]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous default output column of this input column."
+                          name="AsyncDefaultOutputColumnId">#{Package\FromCSVToJSON\-1:invalid}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Inputs[root].Columns[location]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="location"
+                      externalMetadataColumnId="Package\FromCSVToJSON\JSON Destination.Inputs[root].ExternalColumns[location]"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[location]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous error output column of this input column."
+                          name="AsyncErrorOutputColumnId">#{Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[location]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous default output column of this input column."
+                          name="AsyncDefaultOutputColumnId">#{Package\FromCSVToJSON\-1:invalid}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Inputs[root].Columns[error]"
+                      cachedDataType="i8"
+                      cachedName="error"
+                      externalMetadataColumnId="Package\FromCSVToJSON\JSON Destination.Inputs[root].ExternalColumns[error]"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[error]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous error output column of this input column."
+                          name="AsyncErrorOutputColumnId">#{Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[error]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous default output column of this input column."
+                          name="AsyncDefaultOutputColumnId">#{Package\FromCSVToJSON\-1:invalid}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Inputs[root].Columns[errorcolumn]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="errorcolumn"
+                      externalMetadataColumnId="Package\FromCSVToJSON\JSON Destination.Inputs[root].ExternalColumns[errorcolumn]"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output].Columns[errorcolumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous error output column of this input column."
+                          name="AsyncErrorOutputColumnId">#{Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[errorcolumn]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous default output column of this input column."
+                          name="AsyncDefaultOutputColumnId">#{Package\FromCSVToJSON\-1:invalid}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Inputs[root].ExternalColumns[id]"
+                      dataType="i8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Inputs[root].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Inputs[root].ExternalColumns[location]"
+                      dataType="wstr"
+                      length="255"
+                      name="location" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Inputs[root].ExternalColumns[error]"
+                      dataType="i8"
+                      name="error" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Inputs[root].ExternalColumns[errorcolumn]"
+                      dataType="wstr"
+                      length="255"
+                      name="errorcolumn" />
+                  </externalMetadataColumns>
+                </input>
+                <input
+                  refId="Package\FromCSVToJSON\JSON Destination.Inputs[&lt;Create New Input&gt;]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="&lt;Create New Input&gt;">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="ParentId"
+                      name="ParentId">-1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="ParentColumnId"
+                      name="ParentColumnId">-1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="IdField"
+                      name="IdField">-1</property>
+                  </properties>
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)]"
+                  isErrorOut="true"
+                  name="Error Output (CSV File)">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[id]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[location]"
+                      name="location"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[error]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[error]"
+                      name="error"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[errorcolumn]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[errorcolumn]"
+                      name="errorcolumn"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[HttpRequestUrl]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[HttpRequestUrl]"
+                      name="HttpRequestUrl" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[HttpRequestMethod]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[HttpRequestMethod]"
+                      name="HttpRequestMethod" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[HttpRequestHeaders]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[HttpRequestHeaders]"
+                      name="HttpRequestHeaders" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[HttpRequestBody]"
+                      dataType="nText"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Error Output (CSV File)].Columns[HttpRequestBody]"
+                      name="HttpRequestBody" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)]"
+                  name="Default Output (CSV File)">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[id]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="RelativePath"
+                          expressionType="Notify"
+                          name="RelativePath" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="RelativePath"
+                          expressionType="Notify"
+                          name="RelativePath" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[location]"
+                      name="location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="RelativePath"
+                          expressionType="Notify"
+                          name="RelativePath" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[error]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[error]"
+                      name="error"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="RelativePath"
+                          expressionType="Notify"
+                          name="RelativePath" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[errorcolumn]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[errorcolumn]"
+                      name="errorcolumn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="RelativePath"
+                          expressionType="Notify"
+                          name="RelativePath" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[HttpRequestUrl]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[HttpRequestUrl]"
+                      name="HttpRequestUrl" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[HttpRequestMethod]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[HttpRequestMethod]"
+                      name="HttpRequestMethod" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[HttpRequestHeaders]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[HttpRequestHeaders]"
+                      name="HttpRequestHeaders" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[HttpRequestBody]"
+                      dataType="nText"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Default Output (CSV File)].Columns[HttpRequestBody]"
+                      name="HttpRequestBody" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output]"
+                  isErrorOut="true"
+                  name="Orphaned Children Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[Input Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[Input Name]"
+                      name="Input Name" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[Column Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[Column Name]"
+                      name="Column Name" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[Column Value]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[Column Value]"
+                      name="Column Value" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[Parent Input Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[Parent Input Name]"
+                      name="Parent Input Name" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[Parent Column Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[Parent Column Name]"
+                      name="Parent Column Name" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination.Outputs[Orphaned Children Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FromCSVToJSON\JSON Destination Redirect"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2011-2025 KingswaySoft Inc."
+              description="Create a JSON document from column data and send it in an HTTP request or save it to a file."
+              name="JSON Destination Redirect"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="Design">[{"NodeType":2,"SourceType":"Input","InputOrColumnName":"root","Children":[{"NodeName":"id","NodeType":3,"SourceType":"Column","InputOrColumnName":"id"},{"NodeName":"name","NodeType":3,"SourceType":"Column","InputOrColumnName":"name"},{"NodeName":"location","NodeType":3,"SourceType":"Column","InputOrColumnName":"location"},{"NodeName":"error","NodeType":3,"SourceType":"Column","InputOrColumnName":"error"},{"NodeName":"errorcolumn","NodeType":3,"SourceType":"Column","InputOrColumnName":"errorcolumn"}]}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies if the linkId &amp; parentLinkId values used for merging child &amp; parent inputs are scrambled (true) or grouped (false)."
+                  expressionType="Notify"
+                  name="LinkIdsAreScrambled">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the max size of JSON document to output."
+                  expressionType="Notify"
+                  name="MergeMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.DocumentMergeMode">2</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When true the output JSON has line breaks and indents for human readability. When false the output JSON is a single line of text."
+                  expressionType="Notify"
+                  name="PrintPretty">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the batch size for 'Every Batch' Merge Mode."
+                  expressionType="Notify"
+                  name="BatchSize">8192</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how to write null values in the merged document."
+                  expressionType="Notify"
+                  name="NullMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.JsonMergeNullMode">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how to write empty arrays in the merged document."
+                  expressionType="Notify"
+                  name="EmptyArrayMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.JsonEmptyArrayMode">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how to write empty objects in the merged document."
+                  expressionType="Notify"
+                  name="EmptyObjectMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.JsonEmptyObjectMode">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the text encoding to use in the merged document."
+                  expressionType="Notify"
+                  name="Encoding">65001</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text qualifier to use when splitting values to be repeated in the final document."
+                  expressionType="Notify"
+                  name="IsRepeatedTextQualifier">Double-Quote ( " )</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text qualifier to use when splitting values to be repeated in the final document."
+                  expressionType="Notify"
+                  name="IsRepeatedTextDelimiter">Comma ( , )</property>
+                <property
+                  dataType="System.String"
+                  description="The relative path of the HTTP request that will be combined with the base path from the connection manager."
+                  expressionType="Notify"
+                  name="RelativePath">{"IsExpression":true,"Value":"\"[id][name][location][error][errorcolumn]\""}</property>
+                <property
+                  dataType="System.String"
+                  description="The body of the HTTP request."
+                  expressionType="Notify"
+                  name="RequestBody">{"IsExpression":false,"Value":""}</property>
+                <property
+                  dataType="System.String"
+                  description="The headers that will be used in the request."
+                  expressionType="Notify"
+                  name="RequestHeaders">[]</property>
+                <property
+                  dataType="System.String"
+                  description="The query string parameters that will be used in the request."
+                  expressionType="Notify"
+                  name="RequestQueryStringParameters">[]</property>
+                <property
+                  dataType="System.String"
+                  description="The base path for output column values."
+                  expressionType="Notify"
+                  name="BasePath">RelativePath</property>
+                <property
+                  dataType="System.String"
+                  description="The item key for output column values."
+                  expressionType="Notify"
+                  name="ItemKey">{"IsExpression":false,"Value":""}</property>
+                <property
+                  dataType="System.String"
+                  description="The HTTP Method to use when sending requests."
+                  expressionType="Notify"
+                  name="HttpMethod">POST</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the path to the Item to get the json document from."
+                  expressionType="Notify"
+                  name="LocalFilePath">{"IsExpression":false,"Value":""}</property>
+                <property
+                  dataType="System.String"
+                  description="The encoding that will be used to read the json document."
+                  expressionType="Notify"
+                  name="LocalFileEncoding">Unicode (UTF-8)</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.ProductivityPack.JsonDestinationComponent</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FromCSVToJSON\JSON Destination Redirect.Connections[HTTP (KingswaySoft)]"
+                  connectionManagerID="Package.ConnectionManagers[HTTP Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[HTTP Connection Manager]"
+                  description="Connection manager for HTTP connections."
+                  name="HTTP (KingswaySoft)" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="root">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="ParentId"
+                      name="ParentId">#{Package\FromCSVToJSON\-1:invalid}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="ParentColumnId"
+                      name="ParentColumnId">#{Package\FromCSVToJSON\-1:invalid}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="IdField"
+                      name="IdField">#{Package\FromCSVToJSON\-1:invalid}</property>
+                  </properties>
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root].ExternalColumns[error]"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output].Columns[ErrorCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous default output column of this input column."
+                          name="AsyncDefaultOutputColumnId">#{Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[ErrorCode]}</property>
+                        <property
+                          dataType="System.Int32"
+                          name="AsyncErrorOutputColumnId">-1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root].ExternalColumns[errorcolumn]"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous default output column of this input column."
+                          name="AsyncDefaultOutputColumnId">#{Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[ErrorColumn]}</property>
+                        <property
+                          dataType="System.Int32"
+                          name="AsyncErrorOutputColumnId">-1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root].Columns[Flat File Source Error Output Column]"
+                      cachedDataType="nText"
+                      cachedName="Flat File Source Error Output Column"
+                      lineageId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous error output column of this input column."
+                          name="AsyncErrorOutputColumnId">#{Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[Flat File Source Error Output Column]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The asynchronous default output column of this input column."
+                          name="AsyncDefaultOutputColumnId">#{Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[Flat File Source Error Output Column]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root].ExternalColumns[id]"
+                      dataType="i8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root].ExternalColumns[location]"
+                      dataType="wstr"
+                      length="255"
+                      name="location" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root].ExternalColumns[error]"
+                      dataType="i8"
+                      name="error" />
+                    <externalMetadataColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root].ExternalColumns[errorcolumn]"
+                      dataType="wstr"
+                      length="255"
+                      name="errorcolumn" />
+                  </externalMetadataColumns>
+                </input>
+                <input
+                  refId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[&lt;Create New Input&gt;]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="&lt;Create New Input&gt;">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="ParentId"
+                      name="ParentId">-1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="ParentColumnId"
+                      name="ParentColumnId">-1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="IdField"
+                      name="IdField">-1</property>
+                  </properties>
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)]"
+                  isErrorOut="true"
+                  name="Error Output (CSV File)">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[HttpRequestUrl]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[HttpRequestUrl]"
+                      name="HttpRequestUrl" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[HttpRequestMethod]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[HttpRequestMethod]"
+                      name="HttpRequestMethod" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[HttpRequestHeaders]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[HttpRequestHeaders]"
+                      name="HttpRequestHeaders" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[HttpRequestBody]"
+                      dataType="nText"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[HttpRequestBody]"
+                      name="HttpRequestBody" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[Flat File Source Error Output Column]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Error Output (CSV File)].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)]"
+                  name="Default Output (CSV File)">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[id]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="RelativePath"
+                          expressionType="Notify"
+                          name="RelativePath" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="RelativePath"
+                          expressionType="Notify"
+                          name="RelativePath" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[location]"
+                      name="location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="RelativePath"
+                          expressionType="Notify"
+                          name="RelativePath" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[error]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[error]"
+                      name="error"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="RelativePath"
+                          expressionType="Notify"
+                          name="RelativePath" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[errorcolumn]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[errorcolumn]"
+                      name="errorcolumn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Null"
+                          description="RelativePath"
+                          expressionType="Notify"
+                          name="RelativePath" />
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[HttpRequestUrl]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[HttpRequestUrl]"
+                      name="HttpRequestUrl" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[HttpRequestMethod]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[HttpRequestMethod]"
+                      name="HttpRequestMethod" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[HttpRequestHeaders]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[HttpRequestHeaders]"
+                      name="HttpRequestHeaders" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[HttpRequestBody]"
+                      dataType="nText"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[HttpRequestBody]"
+                      name="HttpRequestBody" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[Flat File Source Error Output Column]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[ErrorCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[ErrorColumn]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Default Output (CSV File)].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output]"
+                  isErrorOut="true"
+                  name="Orphaned Children Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[Input Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[Input Name]"
+                      name="Input Name" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[Column Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[Column Name]"
+                      name="Column Name" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[Column Value]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[Column Value]"
+                      name="Column Value" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[Parent Input Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[Parent Input Name]"
+                      name="Parent Input Name" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[Parent Column Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[Parent Column Name]"
+                      name="Parent Column Name" />
+                    <outputColumn
+                      refId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\FromCSVToJSON\JSON Destination Redirect.Outputs[Orphaned Children Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\FromCSVToJSON.Paths[Flat File Source Error Output]"
+              endId="Package\FromCSVToJSON\JSON Destination Redirect.Inputs[root]"
+              name="Flat File Source Error Output"
+              startId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Error Output]" />
+            <path
+              refId="Package\FromCSVToJSON.Paths[Flat File Source Output]"
+              endId="Package\FromCSVToJSON\JSON Destination.Inputs[root]"
+              name="Flat File Source Output"
+              startId="Package\FromCSVToJSON\CSV File.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\FromCSVToJSON"
+          TopLeft="199.16665578468,160.333332218395" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\FromCSVToJSON">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\FromCSVToJSON\CSV File"
+          TopLeft="195.666663751006,36.6666661202907" />
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\FromCSVToJSON\JSON Destination"
+          TopLeft="205.333330273628,143.3333311975" />
+        <EdgeLayout
+          Id="Package\FromCSVToJSON.Paths[Flat File Source Output]"
+          TopLeft="255.266663751006,78.2666661202907">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="30.4666665226221,65.0666650772095"
+              Start="0,0"
+              End="30.4666665226221,57.5666650772095">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5333325386048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5333325386048"
+                    Point2="0,32.5333325386048"
+                    Point3="4,32.5333325386048" />
+                  <mssgle:LineSegment
+                    End="26.4666665226221,32.5333325386048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.4666665226221,32.5333325386048"
+                    Point2="30.4666665226221,32.5333325386048"
+                    Point3="30.4666665226221,36.5333325386048" />
+                  <mssgle:LineSegment
+                    End="30.4666665226221,57.5666650772095" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="7.23333326131107,37.5333325386048,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\FromCSVToJSON\JSON Destination Redirect"
+          TopLeft="393.666660800576,119.599999731779" />
+        <EdgeLayout
+          Id="Package\FromCSVToJSON.Paths[Flat File Source Error Output]"
+          TopLeft="273.799997084339,78.2666661202907">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="221.066663716237,41.3333336114884"
+              Start="0,0"
+              End="221.066663716237,33.8333336114884">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.8618102679979" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.8618102679979"
+                    Point2="0,16.8618102679979"
+                    Point3="4,16.8618102679979" />
+                  <mssgle:LineSegment
+                    End="217.066663716237,16.8618102679979" />
+                  <mssgle:CubicBezierSegment
+                    Point1="217.066663716237,16.8618102679979"
+                    Point2="221.066663716237,16.8618102679979"
+                    Point3="221.066663716237,20.8618102679979" />
+                  <mssgle:LineSegment
+                    End="221.066663716237,33.8333336114884" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="38.0382927956184,21.8618102679979,144.990078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
