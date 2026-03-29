@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ACER-ASPIRE-15_SATURN"
+  DTS:DTSID="{7041C96C-C681-4D50-B447-0619E69937ED}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=ACER-ASPIRE-15\SATURN;Provider=ADsDSOObject;Encrypt Password=False;Integrated Security=SSPI;Mode=ReadWrite;Bind Flags=0;ADSI Flag=-2147483648;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="SATURN_KrukTechOperations"
+  DTS:DTSID="{6CED46C0-3101-478A-87DA-D1410B5C7F8A}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=Acer-Aspire-15\SATURN;Initial Catalog=KrukTechOperations;Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Use Encryption for Data=Optional;Tag with column collation when possible=True;Trust Server Certificate=True;Application Name=SSIS-kruktechintegration-{6CED46C0-3101-478A-87DA-D1410B5C7F8A}Acer-Aspire-15\SATURN.KrukTechOperations1;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
